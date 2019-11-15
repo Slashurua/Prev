@@ -45,12 +45,14 @@ public class MainActivity extends AppCompatActivity {
                 onButtonClicked(false);
             }
         });
-        Button PrevButton = findViewById(R.id.Prev_button);
-        PrevButton.setOnClickListener(new View.OnClickListener() {
+        Button prevButton = findViewById(R.id.Prev_button);
+        prevButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mCurrentIndex = (mCurrentIndex - 1) % mQuestionBank.length;
-
+                if(mCurrentIndex > 0){ mCurrentIndex--;
+                } else {
+                    mCurrentIndex = mQuestionBank.length - 1;
+                }
                 final Question currentQuestion = mQuestionBank[mCurrentIndex];
                 questionString.setText(currentQuestion.getQuestionResId());
             }
