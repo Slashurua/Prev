@@ -45,7 +45,16 @@ public class MainActivity extends AppCompatActivity {
                 onButtonClicked(false);
             }
         });
+        Button PrevButton = findViewById(R.id.Prev_button);
+        PrevButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCurrentIndex = (mCurrentIndex - 1) % mQuestionBank.length;
 
+                final Question currentQuestion = mQuestionBank[mCurrentIndex];
+                questionString.setText(currentQuestion.getQuestionResId());
+            }
+        });
         Button nextButton = findViewById(R.id.next_button);
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -29,12 +29,31 @@
             android:text="@string/false_button" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/next_button"
-        android:drawableRight="@drawable/arrow_right"
-        android:drawablePadding="2dp"
+
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/Prev_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/arrow_left"
+            android:drawablePadding="2dp"
+            android:text="Prev" />
+
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/arrow_right"
+        android:drawablePadding="2dp"
         android:text="@string/next_button" />
 
+
+    </LinearLayout>
+
 </LinearLayout>
+
